@@ -1,0 +1,101 @@
+/* Estilo para el cuerpo de la página */
+body {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el contenedor */
+.container {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Estilo para los titulos dentro del contenedor */
+.container h1 {
+    color: #34495e;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el título "Juego del Ahorcado" */
+.container h1:first-of-type {
+    color: #e74c3c; 
+    font-size: 32px; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid;
+    padding-bottom: 10px;
+}
+
+/* Estilo para los parrafos dentro del contenedor */
+.container p {
+    color: #7f8c8d;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el boton dentro del contenedor */
+.container button {
+    border: none;
+    color: #ffffff;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+}
+
+/* Estilo para el campo de entrada de texto */
+input {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #3498db;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Estilo para la palabra secreta */
+.palabraSecreta {
+    text-transform: uppercase;
+}
+
+/* Estilo para el mensaje final */
+#mensaje-final {
+    text-align: center;
+    height: 25px;
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Estilo para las celdas de la tabla */
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+/* Estilo para los encabezados de la tabla */
+table th {
+    background-color: #3498db;
+    color: #ffffff;
+}

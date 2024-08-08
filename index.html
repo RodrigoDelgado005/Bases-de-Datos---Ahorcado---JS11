@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Ahorcado</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <h1>Juego del Ahorcado</h1>
+            <p class="palabraSecreta"></p> <!--En este Parrafo se mostrara la palabra secreta-->
+            <p class="cronometro">Tiempo: 0 segundos</p> <!-- Muestra el tiempo -->
+            <p class="score">Score: 0</p> <!-- Muestra el score -->
+            <div class="vidas"></div> <!--Aca se mostrara un parrafo con las vidas restantes-->
+            <p>Introduzca una letra:</p>
+            <input type="text" minlength="1" maxlength="1"> <!--campo de entrada de texto donde solo se podra ingresar una letra como maximo-->
+            <br>
+            <button>Verificar Letra</button>
+        </div>
+    </div>
+    
+    <script src="JS/app.js"></script>
+</body>
+</html>
