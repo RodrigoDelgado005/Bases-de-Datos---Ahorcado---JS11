@@ -20,10 +20,6 @@ const cargarPalabras = async () => {
             document.querySelector('.cronometro').innerHTML = `Tiempo: ${tiempo} segundos`; 
         }, 1000);
 
-        alert(palabraAleatoria
-
-        )
-
         // Definimos las vidas que tendrá el usuario y las mostramos en el HTML.
         const vidasTotales = 6; 
         let vidasRestantes = vidasTotales; 
@@ -119,38 +115,5 @@ const cargarPalabras = async () => {
     }
 }
 
-// Función para cargar los mejores scores
-const cargarScores = async () => {
-    try {
-        const respuesta = await fetch('http://localhost:3000/mejores-scores');
-        const scores = await respuesta.json();
 
-        const tbody = document.querySelector('#tabla-scores tbody');
-        tbody.innerHTML = '';
-
-        scores.forEach(score => {
-            const fila = document.createElement('tr');
-            const fecha = new Date(score.fecha);
-            const fechaScore = fecha.toISOString().split('T')[0]; // Formatea la fecha para mostrar solo la parte de la fecha
-
-            fila.innerHTML = `
-                <td>${score.nombre}</td>
-                <td>${score.puntos}</td>
-                <td>${score.tiempo} segundos</td>
-                <td>${fechaScore}</td>
-            `;
-            tbody.appendChild(fila);
-        });
-    } catch (error) {
-        console.error('Error al cargar los scores:', error);
-    }
-}
-
-// Llama a la función para cargar los scores al cargar la página
-document.addEventListener('DOMContentLoaded', () => {
-    if (window.location.pathname.includes('inicio-scores.html')) {
-        cargarScores(); // Solo cargar scores si estamos en inicio-scores.html
-    } else {
-        cargarPalabras(); // Cargar palabras si estamos en index.html
-    }
-});
+cargarPalabras(); // Llama a la función cargarPalabras para empezar el juego.

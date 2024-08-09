@@ -29,6 +29,31 @@
             </a> 
         </div>
     </div>
+
+    <!--Función para cargar los mejores scores -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('http://localhost:3000/mejores-scores')
+                .then(response => response.json())
+                .then(data => {
+                    const tablaScores = document.querySelector('#tabla-scores tbody');
+                    data.forEach(score => {
+                        const fila = document.createElement('tr');
+                        const fecha = new Date(score.fecha);
+                        const fechaScore = fecha.toISOString().split('T')[0]; // Formatea la fecha para mostrar solo la parte de la fecha
+
+                        fila.innerHTML = `
+                            <td>${score.nombre}</td>
+                            <td>${score.puntos}</td>
+                            <td>${score.tiempo}</td>
+                            <td>${fechaScore}</td>
+                        `;
+                        tablaScores.appendChild(fila);
+                    });
+                })
+                .catch(error => console.error('Error al obtener los scores:', error));
+        });
+    </script>
     
    
     <script src="../JS/app.js"></script>
